@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale|split('_')[0] }}">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+</head>
+<body>
+{% block body %}
+    <h1>{{ 'Hello'|trans }}</h1>
+    <div id="app">Oups... Problème</div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('translator') }}
+    {{ encore_entry_script_tags('bazinga') }}
+    {{ encore_entry_script_tags('app') }}
+{% endblock %}
+</body>
+</html>
